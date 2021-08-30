@@ -65,7 +65,7 @@ app.get('/book', (req, res, next) => {
         html += `<td>${book.id}</td>`
         html += `<td>${book.name}</td>`
         html += `<td>${book.content}</td>`
-        html += `</tr>`
+        html += `</tr>\n`
         }
         html += `</tbody>
             </table>

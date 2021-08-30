@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/',express.static('./public'))
 
 app.get('/book', (req, res, next) => {
-    res.status(200).json(books.slice().reverse())   // 복제를 해서 reverse deepcopy
+    res.status(200).json(books.slice().reverse())   // 복제를 해서 reverse deep copy
 })
 
 app.post('/book', (req, res, next) => {

@@ -13,8 +13,8 @@ const books = [
 
 
 /*************** view engine *****************/
-app.set('view engine', 'ejs')   // view engine = 변수명
-app.set('views', './views')     // views 폴더에 넣어라~
+app.set('view engine', 'ejs')   // view engine 을 ejs로 쓴다.
+app.set('views', './views')     // view들을 views 폴더에 넣어라~ 
 
 
 /*************** Middleware *****************/
@@ -27,7 +27,7 @@ app.use('/',express.static('./public'))
 
 app.get('/book', (req, res, next) => {
     const reverseBooks = books.slice().reverse();
-    res.status(200).render('list', { reverseBooks }) // render .ejs => html로 표현해서 보내줄께~! 동적 Page
+    res.status(200).render('list', { reverseBooks }) // render( views폴더의 파일명, { 보낼값 }) => html로 표현해서 보내줄께~! 동적 Page
 })
 
 app.post('/book', (req, res, next) => {
