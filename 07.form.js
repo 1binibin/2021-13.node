@@ -14,29 +14,27 @@ const books = [
 ]
 
 /*************** Middleware *****************/
-//application/json
-app.use(express.json()) //json방식 처리
+//application/json 을 처리
+app.use(express.json()) //qs사용중, json방식 처리
 
-//application/x-www-urlencoded
+//application/x-www-urlencoded 을 처리
 app.use(express.urlencoded({ extended: false }))    // form처리,순수한 form을쓸땐 false, post로 보냈는데 배열과 객체를 써서 보내면 true(express가 알아서 변환해줌)
-
+    // 딱하나 배열로 보냄 input type=radio
 
 /*************** router init *****************/
 app.use('/', express.static('./public'))
-app.get('/', (req, res, next) =>{
+app.get('/', (req, res, next) =>{// get은 params, query 둘중에 하나
     //req.params.id (/book:/id)
     //req.query.id (/book?id=2)
     
 } )
 
-app.post('/book', (req, res, next) => {
-    // req.body (application/json) : axios.post('/book', { params:{...} })
-    // req body (application/x-www-urlencoded): <form method="post">...</form>
+app.post('/book', (req, res, next) => { // req.body로 받아야함 밑에 두개
+    // req.body (type: application/json) : axios.post('/book', { params:{...} })
+    // req body (type: application/x-www-urlencoded):  <form method="post">...</form>
+    console.log(req.body) // undefined 무작정 받지는 못함.
     res.send('받았음')
-    console.log(req.body)
 }) 
 
 /*************** server init  *****************/
 app.listen(port, () => { console.log('http://127.0.0.1:' + port) }) 
-
-
