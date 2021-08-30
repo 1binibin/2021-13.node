@@ -1,0 +1,21 @@
+{
+	"comment": {
+		"scope": "javascript",
+		"prefix": "node",
+		"body": [
+			"/*************** global init **************/",
+			"const port = 3000",
+			"const express = require('express')",
+			"const app = express()",
+			"",
+			"",
+			"/*************** router init **************/",
+			"app.get('/', (req, res, next) => {})",
+			"",
+			"",
+			"/*************** server init **************/",
+			"app.listen(port, serverInit(port))"
+		],
+		"description": "node init"
+	}
+}

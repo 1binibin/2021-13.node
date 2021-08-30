@@ -1,0 +1,27 @@
+{
+  "name": "13.hello-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01.app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1binibin/2021-13-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1binibin/2021-13-node/issues"
+  },
+  "homepage": "https://github.com/1binibin/2021-13-node#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "momnet": "^2.29.1",
+    "pug": "^3.0.2"
+  }
+}
